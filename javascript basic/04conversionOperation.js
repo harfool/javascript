@@ -17,7 +17,7 @@ let password = "harfool@132&" //this type string give us NAN(number)
 let converToNum1 = Number(password) 
 console.log(converToNum1 , typeof converToNum1 )
 
-type conversion boolean to number
+//type conversion boolean to number
 
 let isLogIn = true ; 
 let isLogInBoolToNum = Number (isLogIn) // true => 1 , false => 0
