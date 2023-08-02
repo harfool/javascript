@@ -12,15 +12,29 @@ let converToNum = Number (score)
 console.log(typeof converToNum); // "65" => 65
 console.table([converToString , converToNum ]) //[ '56','65']
 
+// 2nd example 
+let password = "harfool@132&" //this type string give us NAN(number)
+let converToNum1 = Number(password) 
+console.log(converToNum1 , typeof converToNum1 )
+
 //type conversion boolean to number
 
-let isLogIn = true ; 
-let isLogInBoolToNum = Number (isLogIn) // true => 1 , false => 0
-console.log(typeof isLogInBoolToNum , isLogInBoolToNum);
+// let isLogIn = true ; 
+// let isLogInBoolToNum = Number (isLogIn) // true => 1 , false => 0
+// console.log(typeof isLogInBoolToNum , isLogInBoolToNum);
 
-// type conversion number to boolean
+// // type conversion number to boolean
 
-let isLogOut = 0;
-let isLogoutNumToBool = Boolean(isLogOut) 
-console.log(typeof isLogoutNumToBool , isLogoutNumToBool);
+// let isLogOut = 0;
+// let isLogoutNumToBool = Boolean(isLogOut) 
+// console.log(typeof isLogoutNumToBool , isLogoutNumToBool);
 
+// //  type conversion  undefined
+// const name = undefined 
+// let undefinedToNum = Number(name) // undefined convert to number give us NAN(number)
+// console.log(typeof undefinedToNum , undefinedToNum);
+
+// //type conversion null
+// let empty = null
+// let nullToNumber= Number(empty)//null convert to number give us 0(number)
+// console.log(typeof nullToNumber, nullToNumber );
