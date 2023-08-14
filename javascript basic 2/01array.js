@@ -179,7 +179,33 @@ fruit1.valueOf();
 
 //------------------------------------------------------------------------------------
 //flat() --> Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
  let maxarray = [1,2,3,[23,34,45,2],23,45,[2,3,4,[1,2,3,4]]]
  console.log("max array", maxarray);
  console.log("flat", maxarray.flat(Infinity));
+
  //------------------------------------------------------------------------------   
+ //Array.spred() this method combine multiple array
+
+ const numbersOne = [1, 2, 3];
+ const numbersTwo = [4, 5, 6];
+ const numbersCombined = [...numbersOne, ...numbersTwo];
+ console.log('combined', numbersCombined);//[1, 2, 3, 4, 5, 6]
+    
+  //------------------------------------------------------------------------------   
+
+  // array.from()--> this methods convert other data type to array
+  let harfool = "harfool gujjar"
+  console.log(Array.from(harfool)); //An iterable object to convert to an array.
+  console.log(Array.from({name: "harfool"})); //its give a empty array 
+  
+    //------------------------------------------------------------------------------   
+
+    //Array.of()  --> this method create new Array from given arguments    
+     
+    let score1= 100
+    let score2= 130
+    let score3= 140
+    console.log(Array.of(score1,score2,score3));// its gives  A set of elements to include in the new array object.
+     
+    console.log(Array.of("harfool", 12 ,true));
