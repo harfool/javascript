@@ -16,6 +16,14 @@ const regularUser = {
 
     }
 }
-console.log("regularUser",regularUser);
-console.log("regularUser.fullName",regularUser.fullName);
-console.log("regularUser.fullName.userFullName",regularUser.fullName.userFullName);
+// console.log("regularUser",regularUser);
+// console.log("regularUser.fullName",regularUser.fullName);
+// console.log("regularUser.fullName.userFullName",regularUser.fullName.userFullName);
+
+let data = [
+    {id:"123", email:"g@gmail.com"},
+    {id:"123", email:"g@gmail.com"},
+    {id:"123", email:"g@gmail.com"},
+    {id:"123", email:"g@gmail.com"}
+]
+data[1].
