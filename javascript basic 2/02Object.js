@@ -35,3 +35,13 @@ console.log(dev[mykey]);
  dev.age = 21
  console.log(`Is log in ${dev.isLogIn}`);
  console.log(`developer age : ${dev.age}`);
+
+ // marge object
+ let obj1 ={1:"a", 2:"b"}
+ let obj2 ={3:"c", 4:"d"}
+ let obj3 ={5:"e", 6:"f"}
+ let margedObject =Object.assign({}, obj1,obj2,obj3)
+//console.log("new marged object = ",margedObject);
+let bestWayObj ={...obj1, ...obj2, ...obj3}
+console.log(bestWayObj);
+
