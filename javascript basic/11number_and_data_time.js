@@ -25,3 +25,10 @@ console.log(month);
 
 const year=today.getFullYear();//get the current year
 console.log(year);//get the current year
+
+//`${today.getDate()} and month is ${today.getMonth()}`
+
+today.toLocaleDateString('default',{
+    weekday:'long'
+
+})// custmise date 
