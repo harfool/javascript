@@ -178,3 +178,8 @@ fruit1.valueOf();
 // console.log(fruit1);
 
 //------------------------------------------------------------------------------------
+//flat() --> Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+ let maxarray = [1,2,3,[23,34,45,2],23,45,[2,3,4,[1,2,3,4]]]
+ console.log("max array", maxarray);
+ console.log("flat", maxarray.flat(Infinity));
+ //------------------------------------------------------------------------------   
