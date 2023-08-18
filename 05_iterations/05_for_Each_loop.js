@@ -31,3 +31,4 @@ let myCoding = [
 myCoding.forEach((element)=>{
     console.log(element["coding"]);
 })
+// for each not return value
