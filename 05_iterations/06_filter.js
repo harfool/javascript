@@ -51,6 +51,8 @@ const books = [
 
 // const newNums = myNumers.map( (num) => { return num + 10}) // when you open scope {} use return keyword 
 
+
+// chaining we use one or more methods 
 const newNums = myNumers
                 .map((num) => num * 10 )
                 .map( (num) => num + 1)
