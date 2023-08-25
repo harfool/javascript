@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 dom</title>
+</head>
+<body>
+    <div id="id">this is id</div>
+    <div class="class">this is class</div>
+           <h1 class="heading">my name is harfool</h1>
+           <h1 class="heading">my name is harfool</h1>
+           <h1 class="heading">my name is harfool</h1>
+           <h1 class="heading">my name is harfool</h1>
+           <p>Lorem ipsum dolor sit amet,</p>
+  
+    </div>
+
+    <script>
+        //get element by id
+        let id = document.getElementById('id')
+        id.style.backgroundColor = "red"
+
+
+        // get element by class
+        let red = document.getElementsByClassName('class')[0]
+        red.style.backgroundColor = 'pink'
+
+
+        // get element by tagName
+        let size =document.getElementsByTagName('p')[0]
+        size.style.color = 'green'
+        
+        // get element byy querySelectorAll
+        let my = document.querySelectorAll('.heading')
+        my.forEach((h)=>{
+            h.style.display = 'inline-'
+            h.style.backgroundColor = 'blue';
+            h.style.Color;
+            h.innerText = "change by DOM"
+            h.padding ='12px'
+        })
+        
+        // get element by query selector 
+        document.querySelector('h1').style.color = 'red'
+        
+    </script>
+</body>
+</html>
