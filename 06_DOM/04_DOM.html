@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Js</li>
+        <li>Java</li>
+        <li>C</li>
+        <li>C++</li>
+    </ul>
+</body><script>
+    document.body.style.backgroundColor = "gray"
+    function add(languageName){
+        const li = document.createElement('li')
+        let addText = document.createTextNode(`${languageName}`)
+        li.appendChild(addText)
+        document.body.appendChild(li)
+        // anoter way to add text
+        //li.innerHTML = `${languageName}`
+        // document.quearySelector('.language').appendChild(li)
+        
+    }
+</script>
+</html>
