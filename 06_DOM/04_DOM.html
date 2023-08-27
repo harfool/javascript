@@ -24,5 +24,32 @@
         // document.quearySelector('.language').appendChild(li)
         
     }
+    function opotimsie(languageName){
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild(li)
+    }
+    opotimsie("javaScript")
+    opotimsie("python")
+
+    // edit 
+
+    let edit = document.querySelector("li:nth-child(1)")
+    // edit.innerHTML = " dom edit" // easy ways
+    let newli =  document.createElement('li')
+     newli.textContent = "mono" // another way
+     edit.replaceWith(newli)
+
+     //const li2 = document.querySelector("li:nth-child(1)")
+     //li2.appendChild(document.createTextNode(" typescript"))
+     //document.querySelector('li').appendChild(li2)
+
+     // remove
+  let remove = document.querySelector('li:nth-child(1)')
+  remove.remove()   
+
+
+
+
 </script>
 </html>
