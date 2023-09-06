@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Propagation Example</title>    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background: gray;
+        }img{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>        
+        <!-- Event propagation in JavaScript refers to the order in which events are delivered or "propagated" from the target element to its parent elements in the DOM (Document Object Model). Understanding event propagation is crucial when working with event handling in JavaScript as it allows you to control how events are processed and which event handlers are triggered.
+
+There are two phases of event propagation in the DOM:
+
+1. => Event Capturing (or Capture) Phase: During this phase, the event travels from the root of the DOM tree to the target element. It starts with the outermost parent element and moves towards the target element. Event listeners attached to elements in this phase are triggered before the event reaches the target.
+
+2. => Event Bubbling Phase: After the event reaches the target element and is processed there, it starts bubbling up from the target element to the root of the DOM tree. Event listeners attached to elements in this phase are triggered as the event bubbles up the tree.
+
+Here's an example to illustrate event propagation: -->
+    </div>
+        
+    <script>
+        let image = document.querySelector('#images')
+        let owl = document.querySelector('#owl')
+        let google = document.querySelector('#google')
+        
+
+
+       // Event Bubbling ==> buttom to top
+       image.addEventListener('click', (e)=>{
+        //  console.log('clicked inside the ul')
+       },false)
+       owl.addEventListener('click', (e)=>{
+         // console.log('owl clicked ')
+         // when we stop propagatin use stopPropagation () method 
+         e.stopPropagation()
+       } ,false)
+      
+
+//Event Capturing (or Capture) ==> top to buttom
+ image.addEventListener('click', (e)=>{
+    console.log('clicked inside the ul')
+ } ,true)
+ owl.addEventListener('click', (e)=>{
+    console.log('owl clicked ')
+ } ,true)
+
+google.addEventListener('click', (e)=>{
+ document.body.style.backgroundColor= "black"
+ e.preventDefault()
+ e.stopImmediatePropagation()
+ console.log('google click')
+},)
+    </script> 
+</body>
+</html>

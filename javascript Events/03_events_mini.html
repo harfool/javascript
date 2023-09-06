@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event part 2</title>
+</head>
+<body>
+    <h1>hyy harfool!!!</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+    let interval; // Corrected the variable name
+    
+    let start = document.querySelector('#start');
+    let stop = document.querySelector('#stop');
+    start.addEventListener('click', ()=>{
+        console.log("you press start button")
+        interval = setInterval(()=>{
+            console.log("harfool Gujjar", Date.now())
+        },2000)
+    })
+    stop.addEventListener('click', ()=>{
+        clearInterval(interval)
+        console.log("stop intervel")
+    })
+</script>
+</html>
